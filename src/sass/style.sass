@@ -1,0 +1,487 @@
+@mixin Font
+  font-family: "Arvo", serif
+  font-weight: 600
+  font-style: normal
+  color: white
+
+body
+    background-image: url('/src/image/bg.png')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    background-attachment: fixed
+    min-height: 100vh
+    overflow-x: hidden
+    
+
+header
+    width: 1400px
+    margin: 0 auto
+    margin-top: 25px
+    display: flex
+    justify-content: space-around
+    background-color: #301f17
+    border-radius: 50px
+    border: 3px solid white
+    margin-bottom: 150px
+
+    
+
+.logotip
+    margin-right: 100px
+    margin-left: 50px
+
+nav
+    display: flex
+    justify-content: space-between
+    margin-top: 60px
+    margin-bottom: 55px
+    font-size: 30px
+    @include Font
+
+.History
+    margin-right: 5px
+    display: flex
+    width: 400px
+
+.hist
+    margin-right: 5px
+
+.cont
+    margin-right: 5px
+
+.drink
+    margin-right: 5px
+
+.Contact
+    margin-right: 100px
+    display: flex
+
+.Drinks
+    display: flex
+    width: 400px
+    & p 
+        margin-right: 50px
+
+h1
+    color: white
+    @include Font
+    font-size: 50px
+    margin-bottom: 100px
+
+
+.left-right-line
+    text-align: center
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 auto
+    gap: 15px
+    width: 1400px
+    margin-bottom: 50px
+
+.left-right-line:before,
+.left-right-line:after 
+    content: ""
+    flex: 1
+    border-bottom: 3px solid white
+    height: 1px
+
+
+.history-block
+    border-radius: 50px
+    width: 1400px
+    height: 600px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    margin-bottom: 200px
+    & img
+        border: 3px solid white
+        margin-top: 30px
+        border-radius: 50px
+        width: 50%
+        margin-right: 15px
+
+.d
+    margin-top: 40px
+    border: 3px solid white
+    color: #e8e8e8
+    padding-left: 30px
+    padding-right: 30px
+    font-size: 18px
+    font-weight: 300
+    padding-top: 10px
+    padding-bottom: 10px
+    background-color: #543221
+    border-radius: 50px
+    text-align: right
+    line-height: 19px
+    &:first-child
+        margin-bottom: 15px
+
+.carousel-item
+    margin-bottom: 50px
+    img
+        height: 700px
+        object-fit: contain
+
+.carousel-caption
+    margin: 0 auto
+    width: 400px
+    background-color: rgba(71, 71, 71, 0.7)
+    border: 3px solid white
+    border-radius: 50px
+
+.overlay
+    position: absolute
+    left: 475px
+    height: 700px
+    width: 530px
+    object-fit: contain
+    background: black
+    opacity: 0.15
+
+h5
+    @include Font
+    margin-bottom: 10px 
+
+p
+    @include Font
+        
+
+.drinks
+    position: relative
+    width: 1400px
+    height: 1200px
+    margin: 0 auto
+    justify-content: center
+    padding-top: 100px
+    border-radius: 50px
+    margin-bottom: 50px
+    
+    
+.drinks_one 
+    display: flex
+    justify-content: space-around
+    margin-bottom: 30px
+
+
+.drinks_two 
+    display: flex
+    justify-content: center
+
+
+.drink-item 
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    & span 
+        align-content: center
+        @include Font
+
+
+.drink-item img 
+    border: 3px solid #301f17
+    width: 400px
+    height: 400px
+    border-radius: 100px
+    margin-bottom: 10px
+
+
+.drink-label 
+    width: 400px
+    height: 50px
+    border-radius: 50px
+    border: 3px solid white
+    background-color: #543221
+    font-size: 18px
+    color: white
+    margin-top: 10px
+
+ul
+  display: flex
+  grid-auto-flow: row
+  grid-gap: 24px
+  justify-items: center
+  margin: auto
+
+
+a 
+  color: white
+  text-decoration: none
+  box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4)
+
+
+a:hover 
+  box-shadow: inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4)
+
+
+li:last-child 
+  grid-column: 1 / 2
+  grid-row: 1 / 2
+
+
+li:hover ~ li p 
+  animation: wave-animation 0.3s infinite
+
+.foot 
+    overflow-x: hidden
+    display: flex
+    justify-content: center
+    height: 100px
+    width: 100vw
+    background-color: #3a2104
+    line-height: 1.3
+    font-family: Menlo, monospace
+  
+
+
+@keyframes wave-animation 
+  0%,
+  100% 
+    transform: rotate(0deg)
+  
+  25% 
+    transform: rotate(20deg)
+  
+  75% 
+    transform: rotate(-15deg)
+  
+
+@media (width <= 1201px)
+    body
+        max-width: 1200px
+    header
+        max-width: 1200px
+    .history-block
+        max-width: 1200px
+        align-items: center
+        & img
+            height: 100%
+    .left-right-line
+        margin-bottom: 50px
+        max-width: 1200px
+    .contacts-block
+        max-width: 1200px
+        &__img
+            max-width: 1200px
+    .drinks
+        max-width: 1200px
+    .foot 
+        overflow-x: hidden
+        display: flex
+        justify-content: center
+        height: 100px
+        width: 1200px
+    
+@media (width <= 1001px)
+    body
+        max-width: 1000px
+    header
+        max-width: 1000px
+    .logotip
+        display: flex
+        align-items: center
+        margin-right: 0px
+        margin-left: 10px
+    .logotip img
+        width: 150px
+        height: 150px
+    nav
+        max-width: 1000px
+        font-size: 23px
+        & img
+            width: 40px
+            height: 40px
+    .History
+        display: flex
+        align-items: center
+        margin-right: 40px
+    .Contact
+        display: flex
+        align-items: center
+        margin-right: 40px
+    .Drinks 
+        display: flex
+        align-items: center
+        & p 
+            margin-right: 20px
+    .history-block
+        max-width: 1000px
+        align-items: center
+        & img
+            height: 100%
+    .d
+        font-size: 16px
+    .left-right-line
+        margin-bottom: 50px
+        max-width: 1000px
+    .contacts-block
+        max-width: 1000px
+        &__img
+            max-width: 1000px
+            & img
+                width: 159px
+                height: 220px
+    .drinks
+        max-width: 1000px
+        height: 100%
+        background-size: 100%
+        padding-top: 30px
+        padding-bottom: 30px
+    .drink-item img
+        width: 300px
+        height: 300px
+    .foot 
+        overflow-x: hidden
+        display: flex
+        justify-content: center
+        height: 100px
+        width: 1000px
+
+@media (width <= 771px)
+    body
+        max-width: 770px
+    header
+        max-width: 770px
+    .logotip
+        display: flex
+        align-items: center
+        margin-left: 30px
+        margin-right: 0
+        & img
+            width: 100px
+            height: 100px
+            margin-right: 25px
+    nav
+        max-width: 770px
+        font-size: 18px
+        & img
+            width: 25px
+            height: 25px
+    .History
+        margin-right: 30px
+    .Contact
+        margin-right: 30px
+    .Drinks p 
+        margin-right: 10px
+    .history-block
+        max-width: 770px
+        height: 300px
+        align-items: center
+        & img
+            display: none
+    .d
+        font-size: 13px
+    .left-right-line
+        margin-bottom: 130px
+        max-width: 770px
+    .contacts-block
+        max-width: 770px
+        height: 500px
+        &__img
+            max-width: 770px
+            height: 250px
+            margin-bottom: 0px
+            & img
+                width: 119px
+                height: 180px
+    .contacts-block__description
+        padding-top: 0
+        font-size: 23px
+
+    .drinks
+        max-width: 770px
+        height: 100%
+        background-size: 100%
+        padding-top: 10px
+        padding-bottom: 10px
+    .drink-item img
+        width: 250px
+        height: 250px
+    .drink-item span
+        width: 350px
+    .foot
+        width: 770px
+
+@media (width <= 391px)
+    body
+        max-width: 390px
+    header
+        max-width: 390px
+        height: 50px
+        align-items: center
+    .logotip
+        display: flex
+        align-items: center
+        margin-left: 10px
+        margin-right: 0
+        & img
+            width: 50px
+            height: 50px
+            margin-right: 0
+    nav
+        max-width: 390px
+        font-size: 9px
+        align-items: center
+        text-align: center
+        & img
+            width: 10px
+            height: 10px
+            align-items: center
+    .History
+        margin-right: 20px
+    .Contact
+        margin-right: 20px
+    .Drinks p 
+        margin-right: 5px
+    .history-block
+        max-width: 390px
+        height: 500px
+        align-items: center
+        & img
+            display: none
+        &__description
+            margin-bottom: 0
+    .d
+        font-size: 13px
+    h1
+        font-size: 30px
+    .left-right-line
+        position: relative
+        max-width: 390px
+    .contacts-block
+        max-width: 390px
+        height: 400px
+        &__img
+            max-width: 390px
+            height: 200px
+            margin-bottom: 0px
+            & img
+                width: 69px
+                height: 110px
+    .contacts-block__description
+        padding-top: 0
+        font-size: 23px
+
+    .drinks
+        max-width: 390px
+        height: 100%
+        background-image: none
+        border: none
+        padding-top: 10px
+        padding-bottom: 10px
+    .drinks_one
+        display: inline
+        justify-content: center
+    .drink-item img
+        width: 250px
+        height: 250px
+    .drink-item span
+        width: 350px
+        margin-bottom: 20px
+    .foot
+        width: 390px
