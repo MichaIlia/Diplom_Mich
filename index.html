@@ -1,121 +1,325 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF‑8">
-  <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
-  <title>Бар Бинхартс</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бинхартс — Бар в Елабуге</title>
+  <meta name="description" content="Бинхартс — уютный бар в Елабуге с авторскими напитками и лучшей барменами. Атмосфера тепла и радушия с 2014 года.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
   <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
 
-<video autoplay muted loop id="bg-video">
-  <source src="src/video/binharts_bg.mp4" type="video/mp4">
-</video>
-
-<div id="content">
-
-  <section class="section hero text-center" data-aos="fade-in">
-    <div class="overlay-block">
-      <h1>Бинхартс</h1>
-      <p class="lead">Где каждое мгновение — новая история</p>
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">
+        <img src="src/image/logo.png" alt="Бинхартс" height="50">
+        <span class="brand-text">Бинхартс</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Открыть меню">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#story">История</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Бармены</a></li>
+          <li class="nav-item"><a class="nav-link" href="#drinks">Напитки</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <section class="hero-section" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center" data-aos="fade-in" data-aos-duration="1200">
+      <img src="src/image/logo.png" alt="Логотип Бинхартс" class="hero-logo mb-4">
+      <h1 class="hero-title">Бинхартс</h1>
+      <p class="hero-subtitle">Где каждое мгновение — новая история</p>
+      <p class="hero-location"><i class="bi bi-geo-alt-fill"></i> Елабуга, ул. Баки Урманче, 5А</p>
+      <a href="#drinks" class="btn btn-hero mt-3">
+        <i class="bi bi-cup-straw me-2"></i>Наши напитки
+      </a>
+    </div>
+    <a href="#story" class="scroll-down">
+      <i class="bi bi-chevron-double-down"></i>
+    </a>
   </section>
 
-  <section id="story" class="section" data-aos="fade-right">
-    <div class="overlay-block">
-      <h2>Наша история</h2>
-      <p>Сеть ресторанов "Бинхартс Кофе" была основана в 2014 году, и с тех пор она стала настоящим символом изысканных завтраков и уютных ресторанов в 6 разных городах. Наши 16 ресторанов стали настоящими легендами, благодаря большим порциям и безупречному сервису, которые делают нас уникальными.</p>
-      <p>"Бинхартс" – это место, где воплотились в жизнь лучшие аспекты американской и европейской культуры кофейных заведений. Наша цель - создать атмосферу уюта, спокойствия и безопасности для всех наших гостей. Мы верим, что каждый человек, пересекший порог "Бинхартс Кофе", заслуживает особенного внимания и заботы, и мы стремимся угодить каждому из них.
-      Наш успех базируется на едином стиле, который мы поддерживаем во всех наших ресторанах. Этот стиль включает в себя высокое качество предоставляемых услуг, дизайнерский интерьер, вежливое обслуживание и профессионализм наших сотрудников. Мы гордимся тем, что предлагаем своим гостям не только отличный кофе и вкусную еду, но и непередаваемую атмосферу тепла и радушия.</p>
-    </div>
-  </section>
-
-  <section id="team" class="section text-center" data-aos="fade-up">
-    <div class="overlay-block">
-      <h2>Наши бармены</h2>
-      <div id="barmenCarousel" class="carousel slide" data-bs-ride="carousel">
-
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="src/image/Luba.jpeg" alt="Люба">
-            <p class="name">Любовь</p>
-          </div>
-          <div class="carousel-item">
-            <img src="src/image/Marina.jpeg" alt="Марина">
-            <p class="name">Марина</p>
-          </div>
-          <div class="carousel-item">
-            <img src="src/image/Danya.jpg" alt="Даня">
-            <p class="name">Данил</p>
-          </div>
-          <div class="carousel-item">
-            <img src="src/image/Dima.jpeg" alt="Дима">
-            <p class="name">Дмитрий</p>
+  <section class="section story-section" id="story">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+          <div class="story-image-wrapper">
+            <img src="src/image/hist_image.jpg" alt="История Бинхартс" class="story-image">
+            <div class="story-badge">
+              <i class="bi bi-cup-hot-fill"></i>
+              <span>с 2014 года</span>
+            </div>
           </div>
         </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#barmenCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#barmenCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="story-content">
+            <h2 class="section-title">Наша история</h2>
+            <p class="lead-text">
+              Сеть <strong>«Бинхартс Кофе»</strong> была основана в 2014 году и с тех пор стала настоящим символом 
+              изысканных завтраков и уютных ресторанов. Сегодня наши 16 ресторанов в 6 городах — это легенды 
+              с безупречным сервисом и большими порциями.
+            </p>
+            <p>
+              «Бинхартс» — это воплощение лучших традиций американской и европейской культуры кофейных заведений. 
+              Мы создаём атмосферу уюта, спокойствия и безопасности для каждого гостя.
+            </p>
+            <p>
+              Наш успех базируется на едином стиле: высокое качество, дизайнерский интерьер, вежливое обслуживание 
+              и профессионализм сотрудников. Мы предлагаем не просто кофе и еду — мы дарим тепло и радость 
+              каждого мгновения.
+            </p>
+            <div class="story-stats">
+              <div class="stat-item">
+                <span class="stat-number">16</span>
+                <span class="stat-label">ресторанов</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">городов</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">12</span>
+                <span class="stat-label">лет опыта</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="menu" class="section" data-aos="fade-left">
-    <div class="overlay-block">
-      <h2 class="text-center mb-4">Меню напитков</h2>
+  <div class="divider-section">
+    <div class="container text-center" data-aos="zoom-in">
+      <i class="bi bi-heart-fill divider-icon"></i>
+      <p class="divider-text">Создано с любовью к каждому гостю</p>
+    </div>
+  </div>
+
+  <section class="section team-section" id="team">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">Наша команда</h2>
+        <p class="section-subtitle">Лучшие бармены, которые создадут для вас идеальный напиток</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="src/image/Luba.jpeg" alt="Любовь" class="team-image">
+            </div>
+            <h5 class="team-name">Любовь</h5>
+            <p class="team-role">Бармен</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="src/image/Marina.jpeg" alt="Марина" class="team-image">
+            </div>
+            <h5 class="team-name">Марина</h5>
+            <p class="team-role">Бармен</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="src/image/Danya.jpg" alt="Данил" class="team-image">
+            </div>
+            <h5 class="team-name">Данил</h5>
+            <p class="team-role">Бармен</p>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="src/image/Dima.jpeg" alt="Дмитрий" class="team-image">
+            </div>
+            <h5 class="team-name">Дмитрий</h5>
+            <p class="team-role">Бармен</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section drinks-section" id="drinks">
+    <div class="container">
+      <div class="section-header text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">Наши напитки</h2>
+        <p class="section-subtitle">Авторские коктейли и классические напитки, приготовленные с душой</p>
+      </div>
 
       <div class="row g-4">
-
-        <div class="col-md-6 menu-item">
-          <img src="src/image/smor.webp" class="drink-img" alt="Смузи черная смородина‑кокос">
-          <h5>Смузи черная смородина‑кокос</h5>
-          <p class="price">599 ₽</p>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="drink-card">
+            <div class="drink-image-wrapper">
+              <img src="src/image/smor.webp" alt="Смузи черная смородина-кокос" class="drink-image">
+              <div class="drink-badge">Хит</div>
+            </div>
+            <div class="drink-content">
+              <h5 class="drink-name">Смузи<br>смородина‑кокос</h5>
+              <p class="drink-desc">Освежающий микс лесной смородины с нежным кокосовым молоком</p>
+              <p class="drink-price">599 ₽</p>
+            </div>
+          </div>
         </div>
 
-        <div class="col-md-6 menu-item">
-          <img src="src/image/ydzu.webp" class="drink-img" alt="Баббл Ти Юдзу‑Маракуйя">
-          <h5>Баббл Ти Юдзу‑Маракуйя</h5>
-          <p class="price">499 ₽</p>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="drink-card">
+            <div class="drink-image-wrapper">
+              <img src="src/image/ydzu.webp" alt="Баббл Ти Юдзу-Маракуйя" class="drink-image">
+            </div>
+            <div class="drink-content">
+              <h5 class="drink-name">Баббл Ти<br>Юдзу‑Маракуйя</h5>
+              <p class="drink-desc">Экзотический чай с тапиокой, цитрусом юдзу и тропической маракуйей</p>
+              <p class="drink-price">499 ₽</p>
+            </div>
+          </div>
         </div>
 
-        <div class="col-md-6 menu-item">
-          <img src="src/image/kapuch.webp" class="drink-img" alt="Кофе Капучино">
-          <h5>Кофе "Капучино"</h5>
-          <p class="price">349 ₽</p>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="drink-card">
+            <div class="drink-image-wrapper">
+              <img src="src/image/kapuch.webp" alt="Капучино" class="drink-image">
+            </div>
+            <div class="drink-content">
+              <h5 class="drink-name">Капучино</h5>
+              <p class="drink-desc">Классический итальянский кофе с нежной молочной пенкой</p>
+              <p class="drink-price">349 ₽</p>
+            </div>
+          </div>
         </div>
 
-        <div class="col-md-6 menu-item">
-          <img src="src/image/apple.webp" class="drink-img" alt="Смузи яблоко‑шпинат">
-          <h5>Смузи яблоко‑шпинат</h5>
-          <p class="price">499 ₽</p>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="drink-card">
+            <div class="drink-image-wrapper">
+              <img src="src/image/apple.webp" alt="Смузи яблоко-шпинат" class="drink-image">
+              <div class="drink-badge new">New</div>
+            </div>
+            <div class="drink-content">
+              <h5 class="drink-name">Смузи<br>яблоко‑шпинат</h5>
+              <p class="drink-desc">Витаминный детокс-смузи из свежего яблока и зелёного шпината</p>
+              <p class="drink-price">499 ₽</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+          <div class="drink-card">
+            <div class="drink-image-wrapper">
+              <img src="src/image/kapuch_tiramisu.jpg" alt="Капучино Тирамису" class="drink-image">
+              <div class="drink-badge">Хит</div>
+            </div>
+            <div class="drink-content">
+              <h5 class="drink-name">Капучино<br>Тирамису</h5>
+              <p class="drink-desc">Авторский капучино с сиропом тирамису и какао</p>
+              <p class="drink-price">399 ₽</p>
+            </div>
+          </div>
         </div>
 
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+          <div class="drink-card">
+            <div class="drink-image-wrapper">
+              <img src="src/image/limonade.jpg" alt="Лимонад" class="drink-image">
+            </div>
+            <div class="drink-content">
+              <h5 class="drink-name">Домашний<br>лимонад</h5>
+              <p class="drink-desc">Освежающий цитрусовый лимонад по фирменному рецепту</p>
+              <p class="drink-price">449 ₽</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-</div>
+  <section class="cta-section">
+    <div class="cta-overlay"></div>
+    <div class="container">
+      <div class="cta-content text-center" data-aos="zoom-in">
+        <h2>Приходите к нам!</h2>
+        <p class="cta-text">Забронируйте столик и проведите незабываемый вечер в атмосфере Бинхартс</p>
+        <a href="tel:+79196848277" class="btn btn-cta">
+          <i class="bi bi-telephone-fill me-2"></i>+7 (919) 684-82-77
+        </a>
+      </div>
+    </div>
+  </section>
 
-<footer class="footer text-center">
-  <div class="container">
-    <p>Официальный сайт: <a href="https://beanhearts.ru" target="_blank">beanhearts.ru</a></p>
-    <p><a href="https://t.me/beanheartscoffee" target="_blank">Telegram</a> • <a href="https://vk.com/beanheartscoffee" target="_blank">VK</a></p>
-    <p>© 2014‑2026 «Бинхартс»</p>
-  </div>
-</footer>
+  <footer class="footer-section" id="contacts">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="footer-block">
+            <img src="src/image/logo.png" alt="Бинхартс" class="footer-logo">
+            <p class="footer-desc">Уютный бар в Елабуге с авторскими напитками и лучшим сервисом с 2014 года.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-block">
+            <h5>Контакты</h5>
+            <ul class="footer-contacts">
+              <li><i class="bi bi-geo-alt-fill"></i> Елабуга, ул. Баки Урманче, 5А</li>
+              <li><i class="bi bi-telephone-fill"></i> <a href="tel:+79196848277">+7 (919) 684-82-77</a></li>
+              <li><i class="bi bi-clock-fill"></i> Ежедневно с 10:00 до 23:00</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="footer-block">
+            <h5>Мы в соцсетях</h5>
+            <div class="social-links">
+              <a href="https://t.me/beanheartscoffee" target="_blank" class="social-link" title="Telegram">
+                <i class="bi bi-telegram"></i>
+              </a>
+              <a href="https://vk.com/beanheartscoffee" target="_blank" class="social-link" title="VKontakte">
+                <i class="bi bi-browser-chrome"></i>
+              </a>
+              <a href="https://beanhearts.ru" target="_blank" class="social-link" title="Официальный сайт">
+                <i class="bi bi-globe2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p>© 2014–2026 «Бинхартс». Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init({ duration: 900, once: true });
-</script>
+  <a href="#hero" class="back-to-top" id="backToTop">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="src/js/main.js"></script>
 
 </body>
 </html>
