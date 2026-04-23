@@ -1,10 +1,5 @@
-/**
- * БИНХАРТС — Основной JavaScript
- */
-
 document.addEventListener('DOMContentLoaded', () => {
 
-  // === Инициализация AOS (Animate on Scroll) ===
   AOS.init({
     duration: 900,
     easing: 'ease-out-cubic',
@@ -12,21 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
     offset: 80,
   });
 
-  // === Навигация: эффект при скролле ===
   const navbar = document.getElementById('mainNav');
   const backToTopBtn = document.getElementById('backToTop');
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
 
-    // Навбар
     if (scrollY > 50) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
 
-    // Кнопка "Наверх"
     if (scrollY > 500) {
       backToTopBtn.classList.add('visible');
     } else {
@@ -37,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // === Плавная прокрутка для якорных ссылок ===
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
@@ -54,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
           behavior: 'smooth'
         });
 
-        // Закрыть мобильное меню после клика
         const navCollapse = document.getElementById('navbarNav');
         if (navCollapse.classList.contains('show')) {
           const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
@@ -64,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // === Активная ссылка в навигации при скролле ===
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
 
@@ -91,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', activateNavLink, { passive: true });
   activateNavLink();
 
-  // === Параллакс эффект для hero-секции ===
   const heroSection = document.querySelector('.hero-section');
 
   if (heroSection) {
@@ -105,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // === Анимация счётчиков в секции "История" ===
   const statNumbers = document.querySelectorAll('.stat-number');
   let statsAnimated = false;
 
@@ -146,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', animateStats, { passive: true });
   animateStats();
 
-  // === Эффект при наведении на карточки напитков ===
   const drinkCards = document.querySelectorAll('.drink-card');
 
   drinkCards.forEach(card => {
@@ -155,7 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // === Предзагрузка изображений для плавности ===
   const imagesToPreload = [
     'src/image/bg.jpg',
     'src/image/drink_bin.jpg',
